@@ -1,4 +1,4 @@
 <h1> List of National Parks</h1>
 <% @natparks.each do |park| %>
-<p><%= park.name%></p>
+<p><%= park.name%>, <%= park.state%> <button><a href="/natparks/<%= park.id%>">Find out more!</a></button>
 <% end %>
