@@ -1,0 +1,14 @@
+<h1> Some interesting info about <%= @natpark.name %> National Park. </h1>
+  <p>Park Name: <%=@natpark.name%></p>
+  <p>State: <%=@natpark.state%></p>
+  <p>Short Description: <%= @natpark.description %></p>
+  <p>Reviews: </p>
+  
+
+
+<h1> Add your review! </h1>
+<form action="/review" method="post">
+     <input type="textarea">
+
+     <input type="submit" value="Submit This Form">
+   </form>
