@@ -4,12 +4,10 @@ class ReviewsController < ApplicationController
     @reviews = Review.all
   end
 
-
-
   def create
     @review = Review.create(review_params)
     @natpark = @review.natpark_id
-    redirect_to @natpark
+    redirect_to natpark_path(@natpark)
   end
 
 

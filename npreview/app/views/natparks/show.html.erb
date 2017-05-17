@@ -2,17 +2,21 @@
   <p>Park Name: <%=@natpark.name%></p>
   <p>State: <%=@natpark.state%></p>
   <p>Short Description: <%= @natpark.description %></p>
+
   <p>Reviews: </p>
-  <% @reviews.each do |review| %>
-  <p>TITLE: <%= review.title %><p>
-  <p>REVIEW: <%= review.comment %><p>
-  <%end %>
+    <% @reviews.each do |review| %>
+      <p>TITLE: <%= review.title %><p>
+      <p>REVIEW: <%= review.comment %><p>
+      <p> Submited by: <%= review.traveller.name %></p>
+    <%end %>
 
 
 <h1> Add your review! </h1>
 <form action="/reviews" method="post">
       <p>Title: <input type="text" name="Title"> </p>
       <p>Your review: <input type="textarea" name="Comment"></p>
-      
+
      <input type="submit" value="Submit This Form">
    </form>
+
+   <button><a href="/natparks"> Back to all parks</a></button>
