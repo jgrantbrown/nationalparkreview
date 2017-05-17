@@ -1,5 +1,5 @@
 class Review < ApplicationRecord
-belongs_to :travellers
-belongs_to :natparks
+belongs_to :traveller
+belongs_to :natpark
 
 end

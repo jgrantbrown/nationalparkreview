@@ -6,7 +6,8 @@ class NatparksController < ApplicationController
 
   def show
      @natpark = Natpark.find(params[:id])
-    
+
+     @reviews = Review.select{|review| review.natpark_id == @natpark.id}
   end
 
 end

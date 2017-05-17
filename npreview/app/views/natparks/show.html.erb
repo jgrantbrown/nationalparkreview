@@ -3,7 +3,10 @@
   <p>State: <%=@natpark.state%></p>
   <p>Short Description: <%= @natpark.description %></p>
   <p>Reviews: </p>
-  
+  <% @reviews.each do |review| %>
+  <p>TITLE: <%= review.title %><p>
+  <p>REVIEW: <%= review.comment %><p>
+  <%end %>
 
 
 <h1> Add your review! </h1>

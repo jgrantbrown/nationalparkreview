@@ -71,10 +71,13 @@ Nowhere in the world will you find such a large array of natural arches, patient
 All that said, there are more than arches here: thin fins, towers, bridges, balanced rocks, and spindly needles add to the otherworldly, high-desert sculpture garden, all with whimsical names that somehow perfectly describe them: Courthouse Towers, Parade of Elephants, and Balanced Rock are some of the favorites. Hikers wander around this stone fantasyland on short and long trails, while rock climbers rejoice in the surrounds. '},
 ])
 
-traveller = Traveller.create ([{name: "joe"}, {name: "mike"}, {name: "Jill"}, {name: "Niky"}])
-review= Review.create ([
-  {title: "First",comment: "LOve it", natpark_id: 1,traveller_id:1},
-  {title: "Second",comment: "Awesome", natpark_id: 1,traveller_id:2},
-  {title: "Third",comment: "Great", natpark_id:2,traveller_id:3},
-  {title: "Fourth",comment: "It was oK!!", natpark_id:5,traveller_id:3}
-  ])
+Traveller.create(name: 'joe' )
+Traveller.create(name: 'mike' )
+Traveller.create(name: 'Jill' )
+Traveller.create(name: 'Niky' )
+
+
+ Review.create( title: "this", comment: "how ya", natpark_id: 1, traveller_id: 1)
+ Review.create( title: "that", comment: "Love it", natpark_id: 1, traveller_id: 2)
+ Review.create( title: "other", comment: "Awesome", natpark_id: 2, traveller_id: 3)
+ Review.create( title: "thing", comment: "It was oK", natpark_id: 5, traveller_id: 3)
