@@ -18,8 +18,6 @@
         <%= form_tag("/reviews/#{review.id}", method: "DELETE") do %>
         <%= submit_tag("Delete")%>
         <% end %>
-
-
       <button><%= link_to "Edit this review", edit_review_path(review.id) %></button>
 
 

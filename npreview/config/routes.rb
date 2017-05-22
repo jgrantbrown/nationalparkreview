@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+
+
   root :to => 'application#home'
 
 
@@ -8,8 +10,11 @@ Rails.application.routes.draw do
   resources :travellers, only: [:index, :new, :show]
   resources :reviews, only: [:index, :create, :destroy, :edit, :update]
 
+  resources :registrations, only: [:new, :create]
+  resources :sessions, only: [:new, :create]
+  delete :sessions, to: "sessions#destroy"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  get '/login' => 'sessions#new'
-    post '/login' => 'sessions#create'
-    post '/logout' => 'sessions#destroy'
+
+
+
 end

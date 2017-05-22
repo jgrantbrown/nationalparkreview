@@ -9,6 +9,20 @@
   </head>
 
   <body>
+      <% if flash[:error]%>
+        <div class ="error">
+          <%= flash[:error] %>
+        </div>
+      <% end%>
+
+    <% if logged_in? %>
+      Welcome back to National Parks review
+      <p><%= current_user.username %></p>
+      <%= link_to "Log Out", sessions_path, method: :delete %>
+    <% else %>
+      <%= link_to "Log In", new_session_path %>
+    <% end %>
+
     <%= yield %>
   </body>
 </html>

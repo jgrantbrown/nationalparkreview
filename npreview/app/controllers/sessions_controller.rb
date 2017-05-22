@@ -1,17 +1,23 @@
 class SessionsController < ApplicationController
 
   def new
+    @account= Account.new
   end
 
   def create
-    return redirect_to(controller: 'sessions',
-      action: 'new' if !params[:name] || params[:name].empty?
-      session[:name]= params[:name]
-      redirect_to controller: 'application', action 'sign_in'
+    if account = Account.authenticate(account_params)
+      session[:account_id]= account.id
+      redirect_to natparks_path
+    else
+      flash[:error] = "Bad username or password"
+      redirect_to new_session_path
+    end
   end
 
-  def destroy
-    session.delete :name redirect_to controller: 'application', action: 'sign_in'
+  private
+
+  def account_params
+    params.require(:account).permit(:username, :password)
   end
 
 end

@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_action :verify_logged_in, only: [:new, :create, :edit, :update]
 
   def index
     @reviews = Review.all
@@ -23,7 +24,7 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    
+
     @review = Review.find(params[:id]).destroy
     @natpark = Natpark.find(@review.natpark_id)
     redirect_to natpark_path(@natpark)
