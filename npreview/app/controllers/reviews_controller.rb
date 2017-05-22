@@ -11,11 +11,15 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-    @review = Review.create(review_params)
+    @review = Review.find(params[:id])
+    @natpark= Natpark.find(@review.natpark_id)
   end
 
   def update
-
+    @review=Review.find(params[:id])
+    @review.update(title: params[:review][:title], comment: params[:review][:comment])
+    @natpark = Natpark.find(@review.natpark_id)
+    redirect_to natpark_path(@natpark)
   end
 
   def destroy

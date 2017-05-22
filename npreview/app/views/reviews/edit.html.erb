@@ -1,0 +1,15 @@
+<h1> Update your review of <%= @natpark.name %></h1>
+
+<%= form_tag("/reviews/#{@review.id}", method: "put") do %>
+
+  <%= label_tag(:title ) %>
+  <%= text_field_tag("review[title]")%>
+
+  <%= label_tag(:comment) %>
+  <%= text_field_tag("review[comment]") %>
+
+  <%= hidden_field_tag("review[natpark_id]", params[:id]) %>
+  <%= hidden_field_tag("review[traveller_id]", "1") %>
+
+  <p><%= submit_tag("Update") %></p>
+<% end %>
