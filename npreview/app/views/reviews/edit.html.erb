@@ -3,10 +3,10 @@
 <%= form_tag("/reviews/#{@review.id}", method: "put") do %>
 
   <%= label_tag(:title ) %>
-  <%= text_field_tag("review[title]")%>
+  <%= text_field_tag"review[title]", "#{@review.title}"%>
 
   <%= label_tag(:comment) %>
-  <%= text_field_tag("review[comment]") %>
+  <%= text_field_tag "review[comment]", "#{@review.comment}" %>
 
   <%= hidden_field_tag("review[natpark_id]", params[:id]) %>
   <%= hidden_field_tag("review[traveller_id]", "1") %>

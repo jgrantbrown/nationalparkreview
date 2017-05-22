@@ -23,7 +23,8 @@ class ReviewsController < ApplicationController
   end
 
   def destroy
-    @review = Review.find_by(:id=>review_url.split('/').last).destroy
+    
+    @review = Review.find(params[:id]).destroy
     @natpark = Natpark.find(@review.natpark_id)
     redirect_to natpark_path(@natpark)
   end
