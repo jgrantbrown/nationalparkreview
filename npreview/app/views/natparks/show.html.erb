@@ -1,22 +1,35 @@
+
+<%= button_to  "Go to National Parks", natparks_path, method: :get %>
+<%= button_to  "Go to Travellers Page", travellers_path, method: :get %>
+
+
+
 <h1> Some interesting info about <%= @natpark.name %> National Park. </h1>
   <p>Park Name: <%=@natpark.name%></p>
   <p>State: <%=@natpark.state%></p>
   <p>Short Description: <%= @natpark.description %></p>
 
   <p>Reviews: </p>
-    <% @reviews.each do |review| %>
-      <p>TITLE: <%= review.title %><p>
-      <p>REVIEW: <%= review.comment %><p>
-      <p> Submited by: <%= review.traveller.name %></p>
-    <%end %>
+  <% @reviews.each do |review| %>
+        <p>TITLE: <%= review.title %><p>
+        <p>REVIEW: <%= review.comment %><p>
+        <p> Submited by: <%= review.traveller.name %></p>
+
+        <%= form_tag("/reviews/#{review.id}", method: "DELETE") do %>
+        <%= submit_tag("Delete")%>
+        <% end %>
+
+      <% end %>
+
+  <h1> Add your review! </h1>
 
 
-<h1> Add your review! </h1>
-<form action="/reviews" method="post">
-      <p>Title: <input type="text" name="Title"> </p>
-      <p>Your review: <input type="textarea" name="Comment"></p>
-
-     <input type="submit" value="Submit This Form">
-   </form>
-
-   <button><a href="/natparks"> Back to all parks</a></button>
+    <%= form_tag("/reviews", method: "post") do %>
+      <%= label_tag(:title ) %>
+      <%= text_field_tag("review[title]") %>
+      <%= label_tag(:comment) %>
+      <%= text_field_tag("review[comment]") %>
+      <%= hidden_field_tag("review[natpark_id]", params[:id]) %>
+      <%= hidden_field_tag("review[traveller_id]", "1") %>
+      <%= submit_tag("Create") %>
+    <% end %>
