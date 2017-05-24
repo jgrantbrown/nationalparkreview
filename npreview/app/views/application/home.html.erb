@@ -7,24 +7,12 @@
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
       <title>Home Page</title>
     </head>
-    <body class="main">
 
-      <div class="button">
-        <%= link_to "Sign up", new_registration_path %>
-      </div>
-
-  <h1> Welcome to National Parks review site </h1>
-
-  <%= button_to  "Go to National Parks", natparks_path, method: :get %>
-  <%= button_to  "Go to Travellers Page", travellers_path, method: :get %>
-
-
-  <div class="container-1">
-    <img src="" alt="National Parks"><br> <br>
-
-
-
-  </div>
-
-</body>
+      <body class="main">
+            <div class="container-1">
+              <h1> Review National Parks</h1>
+              <%= button_to  "Go to National Parks", natparks_path, method: :get %>
+              <%= button_to  "Go to Travellers Page", travellers_path, method: :get %>
+            </div>
+      </body>
 </html>

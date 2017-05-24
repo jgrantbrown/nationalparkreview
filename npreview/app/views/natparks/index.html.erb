@@ -1,8 +1,12 @@
-<h1> List of National Parks</h1>
-<% @natparks.each do |park| %>
-<p><%= park.name%>, <%= park.state%> <button><a href="/natparks/<%= park.id%>">Find out more!</a></button>
-<% end %>
+<div class='mainnats'>
+<div class="container-2">
+  <h1>National Parks</h1>
+    <% @natparks.each do |park| %>
+    <p><%= park.name%>, <%= park.state%> <button><a href="/natparks/<%= park.id%>">Find out more!</a></button>
+    <% end %>
 
 
-<%= button_to  " Go to National Parks", natparks_path, method: :get %>
-<%= button_to  " Go to Travellers Page", travellers_path, method: :get %>
+    <%= button_to  " Go to National Parks", natparks_path, method: :get %>
+    <%= button_to  " Go to Travellers Page", travellers_path, method: :get %>
+</div>
+</div>

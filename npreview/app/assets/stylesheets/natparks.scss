@@ -1,3 +1,24 @@
 // Place all the styles related to the natparks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.mainnats{
+  background-color: gray;
+  background-image:url('grandcanyonhome.jpg');
+  /*background-image:url('grandcanyonhome.jpg');*/
+  font-family: futura, Helvetica, Arial, Sans-Serif;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  font-weight: bold;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.container-2 {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 10px;
+  margin: 5% auto;
+  width: 30%;
+  padding-bottom: 50px;
+  padding-top: 20px;
+  text-align: center;
+}

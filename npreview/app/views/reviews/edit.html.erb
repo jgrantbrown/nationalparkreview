@@ -9,7 +9,7 @@
   <%= text_field_tag "review[comment]", "#{@review.comment}" %>
 
   <%= hidden_field_tag("review[natpark_id]", params[:id]) %>
-  <%= hidden_field_tag("review[traveller_id]", "1") %>
+  <%= hidden_field_tag("review[traveller_id]", @review.traveller_id ) %>
 
   <p><%= submit_tag("Update") %></p>
 <% end %>

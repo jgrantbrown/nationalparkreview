@@ -11,28 +11,32 @@
 
   <p>Reviews: </p>
   <% @reviews.each do |review| %>
-        <p>TITLE: <%= review.title %><p>
-        <p>REVIEW: <%= review.comment %><p>
-        <p> Submited by: <%= review.traveller.name %></p>
+      <div class="reviewcontainer">  <% @traveller_id= review.traveller_id %>
+        <% @username=Account.find_by(traveller_id: @traveller_id) %>
 
+        <p>TITLE: <%= review.title %></p>
+        <p>REVIEW: <%= review.comment %></p>
+        <p> Submited by: <%= @username.username %> </p>
+
+
+      <% if @traveller_id==current_user[:traveller_id]%>
         <%= form_tag("/reviews/#{review.id}", method: "DELETE") do %>
-        <%= submit_tag("Delete")%>
+          <%= submit_tag("Delete")%>
         <% end %>
-      <button><%= link_to "Edit this review", edit_review_path(review.id) %></button>
 
+        <button><%= link_to "Edit this review", edit_review_path(review.id) %></button>
+      <%end%>
 
-
-      <% end %>
+    </div>
+    <% end %>
 
   <h1> Add your review! </h1>
-
-
     <%= form_tag("/reviews", method: "post") do %>
       <%= label_tag(:title ) %>
       <%= text_field_tag("review[title]") %>
       <%= label_tag(:comment) %>
       <%= text_field_tag("review[comment]") %>
       <%= hidden_field_tag("review[natpark_id]", params[:id]) %>
-      <%= hidden_field_tag("review[traveller_id]", "1") %>
+      <%= hidden_field_tag("review[traveller_id]", current_user.traveller_id) %>
       <%= submit_tag("Create") %>
     <% end %>

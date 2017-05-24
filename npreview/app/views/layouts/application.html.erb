@@ -6,6 +6,10 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   </head>
 
   <body>
@@ -19,8 +23,11 @@
       Welcome back to National Parks review
       <p><%= current_user.username %></p>
       <%= link_to "Log Out", sessions_path, method: :delete %>
+      <%= link_to "Home", root_path %>
     <% else %>
       <%= link_to "Log In", new_session_path %>
+      <%= link_to "Sign up", new_registration_path %>
+      <%= link_to "Home", root_path%>
     <% end %>
 
     <%= yield %>

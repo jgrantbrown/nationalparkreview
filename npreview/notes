@@ -1,0 +1,25 @@
+Need to redirect and message login if email already exists
+Need to redirect registration if alraedy existe username or email
+
+
+FIXES TO FOCUS ON:
+  NAvigation when not logged in issues?
+
+MODELS:
+  Need a model for photos:
+    belongs_to natpark
+
+    t.integer natpark_id
+
+
+  Add to NAtpark model:
+    has_many photos
+
+
+
+Add:
+  flikr api for public images
+  natparks gov api for national parks complete info and list
+
+FUrther Disccusion:
+  How do I let no-logged in user access show page for nat parks, when hidden review field is looking for current_user.id?

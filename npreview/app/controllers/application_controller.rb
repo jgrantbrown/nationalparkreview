@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   def verify_logged_in
     unless logged_in?
       flash[:error]="You must be logged in to do that"
-    redirect_to natpark_path
+    redirect_to new_session_path
     end
   end
 end
