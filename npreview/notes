@@ -23,3 +23,6 @@ Add:
 
 FUrther Disccusion:
   How do I let no-logged in user access show page for nat parks, when hidden review field is looking for current_user.id?
+
+HEroku launch:
+https://calm-shelf-25696.herokuapp.com/

@@ -19,16 +19,7 @@
         </div>
       <% end%>
 
-    <% if logged_in? %>
-      Welcome back to National Parks review
-      <p><%= current_user.username %></p>
-      <%= link_to "Log Out", sessions_path, method: :delete %>
-      <%= link_to "Home", root_path %>
-    <% else %>
-      <%= link_to "Log In", new_session_path %>
-      <%= link_to "Sign up", new_registration_path %>
-      <%= link_to "Home", root_path%>
-    <% end %>
+  
 
     <%= yield %>
   </body>

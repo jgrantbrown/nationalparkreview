@@ -1,5 +1,5 @@
 
-
+<%= link_to "Log Out", sessions_path, method: :delete %>
 <h1> List of Reviews</h1>
 <% @reviews.each do |review| %>
 <p><%= review.natpark.name %></p>
