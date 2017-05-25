@@ -12,4 +12,4 @@ class NatparksController < ApplicationController
     #  @account= Account.select{|account| @review.traveller_id == account.traveller_id}
   end
 
-end
+end 

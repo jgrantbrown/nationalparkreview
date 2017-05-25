@@ -11,7 +11,8 @@
 
   <p>Reviews: </p>
   <% @reviews.each do |review| %>
-      <div class="reviewcontainer">  <% @traveller_id= review.traveller_id %>
+      <div class="reviewcontainer">
+        <% @traveller_id= review.traveller_id %>
         <% @username=Account.find_by(traveller_id: @traveller_id) %>
 
         <p>TITLE: <%= review.title %></p>

@@ -1,10 +1,12 @@
-Need to redirect and message login if email already exists
-Need to redirect registration if alraedy existe username or email
+
+
 
 
 FIXES TO FOCUS ON:
-  NAvigation when not logged in issues?
+  Navbar add use layouts _navbar.html.erb
 
+
+ADD PHOTOS TABLE
 MODELS:
   Need a model for photos:
     belongs_to natpark
