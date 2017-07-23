@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+
   protect_from_forgery with: :exception, prepend: true
 
   helper_method :logged_in?, :current_user
@@ -22,4 +23,9 @@ class ApplicationController < ActionController::Base
     redirect_to new_session_path
     end
   end
+
+def about
+  @natparks = Natpark.all
+end
+
 end

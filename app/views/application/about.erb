@@ -1,0 +1,22 @@
+<body >
+      <div class="container-1">
+        <h1> Review National Parks</h1>
+        <% if logged_in? %>
+          Welcome back
+          <p><%= current_user.username %></p>
+          <%= link_to "Log Out", sessions_path, method: :delete %>
+          <%= button_to  "Go to National Parks", natparks_path, method: :get %>
+          <%= button_to  "Go to Travellers Page", travellers_path, method: :get %>
+        <% else %>
+          <%= link_to "Log In", new_session_path %>
+          <%= link_to "Sign up", new_registration_path %>
+        <% end %>
+      </div>
+      <h2> Some of the National Parks we look at.</h2>
+      <h2>National Parks</h2>
+        <% @natparks.each do |park| %>
+        <h3><%= park.name%>, <%= park.state%> </h3>
+        <p><%= park.description%> </p>
+        <% end %>
+
+</body>

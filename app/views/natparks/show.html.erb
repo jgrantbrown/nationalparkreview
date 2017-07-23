@@ -9,6 +9,16 @@
   <p>State: <%=@natpark.state%></p>
   <p>Short Description: <%= @natpark.description %></p>
 
+<p> Travllers who have reviewed:</p>
+  <% @account.each do |account| %>
+    <% @reviews.each do |review| %>
+      <% @traveller_id = review.traveller_id %>
+    <% if account.traveller_id == @traveller_id%>
+      <%= account.first_name%>
+  <% end %>
+    <% end %>
+  <% end%>
+
   <p>Reviews: </p>
   <% @reviews.each do |review| %>
       <div class="reviewcontainer">
