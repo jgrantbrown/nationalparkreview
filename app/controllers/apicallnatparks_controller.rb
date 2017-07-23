@@ -1,8 +1,9 @@
 class ApicallnatparksController < ApplicationController
-
+  require 'json'
   require 'uri'
   require 'net/http'
-def index
+
+def apicall
   url = URI("https://developer.nps.gov/api/v0/parks?limit=519")
 
   http = Net::HTTP.new(url.host, url.port)
@@ -16,7 +17,12 @@ def index
 
   response = http.request(request)
 
-  @response = response.read_body
+  # JSON.parse(response.read_body)
+  JSON.parse(response.body)
+end
+
+def index
+  @parkscall = apicall()
 end
 
 end
