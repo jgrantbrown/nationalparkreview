@@ -30121,3 +30121,52 @@ Processing by ApicallnatparksController#index as HTML
 Completed 200 OK in 1282ms (Views: 26.7ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/apicallnatparks" for ::1 at 2017-07-23 11:03:32 -0400
+Processing by ApicallnatparksController#index as HTML
+  Rendering apicallnatparks/index.html.erb within layouts/application
+  Rendered apicallnatparks/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 1591ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apicallnatparks" for ::1 at 2017-07-23 11:04:19 -0400
+Processing by ApicallnatparksController#index as HTML
+  Rendering apicallnatparks/index.html.erb within layouts/application
+  Rendered apicallnatparks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1457ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apicallnatparks" for ::1 at 2017-07-23 11:04:45 -0400
+Processing by ApicallnatparksController#index as HTML
+  Rendering apicallnatparks/index.html.erb within layouts/application
+  Rendered apicallnatparks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1632ms (Views: 70.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apicallnatparks" for ::1 at 2017-07-23 11:06:14 -0400
+Processing by ApicallnatparksController#index as HTML
+  Rendering apicallnatparks/index.html.erb within layouts/application
+  Rendered apicallnatparks/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 1414ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apicallnatparks" for ::1 at 2017-07-23 11:06:48 -0400
+Processing by ApicallnatparksController#index as HTML
+  Rendering apicallnatparks/index.html.erb within layouts/application
+  Rendered apicallnatparks/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 1888ms (Views: 152.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apicallnatparks" for ::1 at 2017-07-23 11:10:05 -0400
+Processing by ApicallnatparksController#index as HTML
+  Rendering apicallnatparks/index.html.erb within layouts/application
+  Rendered apicallnatparks/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 1343ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/apicallnatparks" for ::1 at 2017-07-23 11:10:19 -0400
+Processing by ApicallnatparksController#index as HTML
+  Rendering apicallnatparks/index.html.erb within layouts/application
+  Rendered apicallnatparks/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 1648ms (Views: 98.2ms | ActiveRecord: 0.0ms)
+
+

@@ -1,8 +1,9 @@
 <%= @parkscall["data"][0].keys %>
-<!-- <%= @parkscall["data"][0] %> -->
+<%= @parkscall["data"][0] %>
 <% @parkscall["data"].each do |k,v| %>
   <% if k["designation"] == "National Park" %>
-<li><%=   k["fullName"] %></li>
-
+<h3><%=   k["fullName"] %><h3>
+  <p>All about the park: <%= k["description"] %></p>
+  <p>States:<%= k["states"] %></p>
 <% end %>
 <%end %>
