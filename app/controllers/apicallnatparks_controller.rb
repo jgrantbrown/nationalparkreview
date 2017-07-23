@@ -22,7 +22,12 @@ def apicall
 end
 
 def index
+
   @parkscall = apicall()
+#   @parkscall["data"].each do |k,v|
+#       @newpark = NatParks.new(k = k["designation"], k=k["fullName"],k=k["description"],k = k["states"] )
+# end
+# @newpark
 end
 
 end
