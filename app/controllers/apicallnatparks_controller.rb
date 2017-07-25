@@ -3,6 +3,8 @@ class ApicallnatparksController < ApplicationController
   require 'uri'
   require 'net/http'
 
+helper_method :create_parks
+
 def apicall
   url = URI("https://developer.nps.gov/api/v0/parks?limit=519")
 
@@ -21,13 +23,38 @@ def apicall
   JSON.parse(response.body)
 end
 
+
+# BETA testing data using to show what info is being pulled
+
+
 def index
 
   @parkscall = apicall()
-#   @parkscall["data"].each do |k,v|
-#       @newpark = NatParks.new(k = k["designation"], k=k["fullName"],k=k["description"],k = k["states"] )
-# end
-# @newpark
+
+  @parkscall["data"].each do |park|
+    park["nps_id"] = park.delete "id"
+
+      # park.each do |contentlabel,content|
+
+
+      @newpark = Natpark.create(park)
+    # end
+  end
+
+
+
 end
+
+# trying to build method to add persitence of park data
+def create_parks
+    @parkscall = apicall()
+    @parkscall["data"].each do |park|
+      park.each do |contentlabel,content|
+       newpark = Natpark.new
+       newpark[contentlabel]=content
+      end
+      end
+end
+
 
 end

@@ -4,12 +4,12 @@
 
 
 
-<h1> Some interesting info about <%= @natpark.name %> National Park. </h1>
+<h1> Some interesting info about <%= @natpark.fullName %> </h1>
   <p>Park Name: <%=@natpark.name%></p>
-  <p>State: <%=@natpark.state%></p>
+  <p>State: <%=@natpark.states%></p>
   <p>Short Description: <%= @natpark.description %></p>
 
-<p> Travllers who have reviewed:</p>
+<p> Travellers who have reviewed:</p>
   <% @account.each do |account| %>
     <% @reviews.each do |review| %>
       <% @traveller_id = review.traveller_id %>

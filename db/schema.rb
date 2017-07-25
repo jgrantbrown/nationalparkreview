@@ -24,11 +24,20 @@ ActiveRecord::Schema.define(version: 20170522142514) do
   end
 
   create_table "natparks", force: :cascade do |t|
-    t.text     "name"
-    t.string   "state"
+    t.text     "states"
+    t.string   "latLong"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.text     "designation"
+    t.text     "parkCode"
+    t.text     "nps_id"
+    t.text     "directionsInfo"
+    t.text     "directionsUrl"
+    t.text     "fullName"
+    t.text     "url"
+    t.text     "name"
+    t.text     "weatherInfo"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   create_table "reviews", force: :cascade do |t|

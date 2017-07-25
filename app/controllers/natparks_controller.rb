@@ -1,10 +1,15 @@
 class NatparksController < ApplicationController
   before_action :verify_logged_in
   # before_action :verify_logged_in, only: [:new, :create, :edit, :update, :destroy]
-  
+  # def initialize
+  # end
+helper_method :create_parks
+
 
   def index
+
     @natparks = Natpark.all
+
   end
 
   def show

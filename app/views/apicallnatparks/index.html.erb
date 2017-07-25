@@ -1,17 +1,21 @@
-<p><%= @parkscall["data"][0].keys %></p>
-<!-- <%= @parkscall["data"][0] %> -->
 
-<% @parkscall["data"].each do |park| %>
+<p><%= @parkscall["data"][0].keys %></p>
+
+
+ <!-- <% @parkscall["data"].each do |park| %>
 
   <div>
       <h3><%=park["fullName"]%></h3>
       <%=park["designation"]%>
 
 <% park.each do |contentlabel,content|%>
-  <p><%= contentlabel.to_s %>: <%= content %></p> 
+  <p><%= contentlabel.to_s %>: <%= content %></p>
 </div>
 <%end%>
-<%end %>
+<%end %> -->
+<!-- <%=@parkscall["data"] %> -->
 
-<% if `park["designation"]` == "National Park" %>
-<% end %>
+<%= @parkscall["data"][0] %> -->
+
+<!-- <% if `park["designation"]` == "National Park" %>
+<% end %>  -->
