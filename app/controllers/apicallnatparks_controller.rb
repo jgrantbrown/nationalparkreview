@@ -25,21 +25,16 @@ end
 
 
 # BETA testing data using to show what info is being pulled
-
-
+# how do I only load once and not creat duplicates?
 def index
 
   @parkscall = apicall()
 
   @parkscall["data"].each do |park|
     park["nps_id"] = park.delete "id"
-
-      # park.each do |contentlabel,content|
-
-
       @newpark = Natpark.create(park)
-    # end
-  end
+
+end
 
 
 

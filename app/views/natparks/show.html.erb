@@ -8,6 +8,10 @@
   <p>Park Name: <%=@natpark.name%></p>
   <p>State: <%=@natpark.states%></p>
   <p>Short Description: <%= @natpark.description %></p>
+  <p>Directions: <%= @natpark.directionsInfo %> </p>
+  <p>General Weather Info: <%= @natpark.weatherInfo %> </p>
+  <button><a href= "<%= @natpark.url %>">Offical Park Website</a></button>
+
 
 <p> Travellers who have reviewed:</p>
   <% @account.each do |account| %>
