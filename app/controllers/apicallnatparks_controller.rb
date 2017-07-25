@@ -3,8 +3,8 @@ class ApicallnatparksController < ApplicationController
   require 'uri'
   require 'net/http'
 
-helper_method :create_parks
 
+# move request data to on var and private
 def apicall
   url = URI("https://developer.nps.gov/api/v0/parks?limit=519")
 
@@ -26,8 +26,10 @@ end
 
 # BETA testing data using to show what info is being pulled
 # how do I only load once and not creat duplicates?
-def index
-
+# trying to build method to add persitence of park data
+def create_parks
+  @natparks=Natpark.all
+  binding.pry
   @parkscall = apicall()
 
   @parkscall["data"].each do |park|
@@ -40,16 +42,7 @@ end
 
 end
 
-# trying to build method to add persitence of park data
-def create_parks
-    @parkscall = apicall()
-    @parkscall["data"].each do |park|
-      park.each do |contentlabel,content|
-       newpark = Natpark.new
-       newpark[contentlabel]=content
-      end
-      end
-end
+
 
 
 end

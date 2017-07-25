@@ -8,7 +8,7 @@ class NatparksController < ApplicationController
 helper_method :create_parks
 
   def index
-
+    
     @natparks = Natpark.all
 
   end
