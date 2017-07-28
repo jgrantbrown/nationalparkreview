@@ -19,7 +19,7 @@
 .main{
   background-color: gray;
   background-image:url('giphy-1.gif');
-  
+
   font-family: futura, Helvetica, Arial, Sans-Serif;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -29,7 +29,7 @@
 }
 
 .container-1 {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0);
   border-radius: 10px;
   margin: 15% auto;
   width: 20%;

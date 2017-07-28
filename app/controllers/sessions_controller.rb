@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     if account = Account.authenticate(account_params)
       session[:account_id]= account.id
-      redirect_to natparks_path
+      redirect_to parktypes_path
     else
       flash[:error] = "Bad username or password"
       redirect_to new_session_path

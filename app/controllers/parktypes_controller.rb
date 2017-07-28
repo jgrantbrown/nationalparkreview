@@ -10,7 +10,7 @@ class ParktypesController < ApplicationController
   end
 
   def show
-    @natparks=Natpark.all
+    @natparks=Natpark.sort_by_review_count()
     @designations= Natpark.designations()
     @account = Account.all
 
