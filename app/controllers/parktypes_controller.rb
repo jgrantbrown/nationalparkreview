@@ -11,7 +11,7 @@ class ParktypesController < ApplicationController
   def show
     @natparks=Natpark.all
     @designations= Natpark.designations()
-     @account = Account.all
+    @account = Account.all
   end
 
 end
