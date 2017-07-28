@@ -1,29 +1,9 @@
 
 
-USe on NATparks/index.rb
-<!-- LIST all parks seperated by type -->
-<h3>Park Types:</h3>
-<% @designations.each do |designation| %>
-    <li><%= designation["designation"] %></li>
-
-    <% @natparks.each do |park| %>
-      <% if park["designation"] == designation["designation"] %>
-      <div>
-          <p><%= park.name%>, <%= park.states%></p>
-          Reviews: <%= park.reviews.count %> <button><a href="/natparks/<%= park.id%>">Find out more!</a></button>
-          </p>
-        </div>
 
 
-NATPARKSCONTROLLER
-def index
-@designations= Natpark.designations()
-end
 
-ADD NAV BAR
-  home-about-allparks-natparks-profile-alltravellers
 
-SORTABLE ALLPARKS INDEX PAGE BY DESIGNATION
 RENAME apicall to and DB to parks table
   -breakout parks by designation
 
@@ -33,3 +13,5 @@ Traveller has parks visited and parks reviewed
 
 ADD API call to Flickr for NPS park images
 <body onload="myFunction()">
+
+Add smart search: parktype or name

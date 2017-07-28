@@ -10,9 +10,12 @@
 
   <div class='parktypeslist'>
     <% @designations.each do |park| %>
-
-          <p><%= park["designation"] %>
-          <button><a href='/parktypes/<%=park.designation %>'>See Parks</a></button></p>
+          <% if !park["designation"].empty? %>
+            <p><%= park["designation"] %>
+                Number of parks: 
+                <button><a href='/parktypes/<%=park.designation %>'>See Parks</a></button>
+            </p>
+        <% end %>
     <% end %>
   <div>
 

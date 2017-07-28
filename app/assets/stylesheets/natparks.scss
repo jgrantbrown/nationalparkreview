@@ -2,20 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .mainnats{
-
-  background-color: gray;
-
-  background-image:url('arches4.jpg');
+  background: url('arches4.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
-
-  /*background-image:url('grandcanyonhome.jpg');*/
+  background-color: gray;
   font-family: futura, Helvetica, Arial, Sans-Serif;
-  // -webkit-background-size: cover;
-  // -moz-background-size: cover;
   font-weight: bold;
-  // -o-background-size: cover;
-  // background-size: cover;
+
 }
+
 
 .container-2 {
   background-color: rgba(255, 255, 255, 1);

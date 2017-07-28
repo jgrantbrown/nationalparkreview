@@ -6,12 +6,14 @@ class ParktypesController < ApplicationController
   def index
     @natparks = Natpark.sort_by_review_count()
     @designations= Natpark.designations()
+  
   end
 
   def show
     @natparks=Natpark.all
     @designations= Natpark.designations()
     @account = Account.all
+
   end
 
 end
