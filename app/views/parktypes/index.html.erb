@@ -1,18 +1,18 @@
 
 
-<div class='mainnats'>
+<div class='mainnatsparkindex'>
   <div class="container-2">
 
   <div class="toptype">
-    <h1> Park Types of the</h1>
-    <h1>National Parks Services</h1>
+
+    <h1>National Parks Services Park Types</h1>
   </div>
 
   <div class='parktypeslist'>
     <% @designations.each do |park| %>
           <% if !park["designation"].empty? %>
-            <p><%= park["designation"] %>
-                Number of parks: 
+            <h2><%= park["designation"] %></h2>
+              <p>  Number of parks: <%= @natparks.where(:designation=>park["designation"]).count %>
                 <button><a href='/parktypes/<%=park.designation %>'>See Parks</a></button>
             </p>
         <% end %>

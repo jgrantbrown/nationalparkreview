@@ -11,7 +11,7 @@ class RegistrationsController < ApplicationController
       account.save
     if
       session[:account_id]=account.id
-      redirect_to natparks_path
+      redirect_to parktypes_path
     else
       flash[:error] = "username or email is already taken"
       redirect_to new_registration_path
