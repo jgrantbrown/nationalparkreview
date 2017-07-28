@@ -3,15 +3,18 @@
 <div class='mainnats'>
   <div class="container-2">
 
-<h1> Park Types in the National Parks Services.</h1>
+  <div class="toptype">
+    <h1> Park Types of the</h1>
+    <h1>National Parks Services</h1>
+  </div>
 
-<div class='parktypeslist'>
+  <div class='parktypeslist'>
     <% @designations.each do |park| %>
 
           <p><%= park["designation"] %>
           <button><a href='/parktypes/<%=park.designation %>'>See Parks</a></button></p>
     <% end %>
-<div>
+  <div>
 
   </div>
 </div>

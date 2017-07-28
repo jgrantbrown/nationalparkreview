@@ -13,22 +13,21 @@
   </head>
 
   <body>
-    <div class='topnav'>
-    <%= link_to "Home", root_path, method: :get%>
-    <%= link_to  "Go to Travellers Page", travellers_path, method: :get %>
-    <%= link_to  "Go to Park Types", parktypes_path, method: :get %>
-    <%= link_to  "Go to National Parks", natparks_path, method: :get %>
-    <%= link_to "Log Out", sessions_path, method: :delete %>
-</div>
-
       <% if flash[:error]%>
         <div class ="error">
           <%= flash[:error] %>
         </div>
       <% end%>
 
-
+      <div class='topnav'>
+        <%= link_to "Home", root_path, method: :get%>
+        <%= link_to  "Go to Travellers Page", travellers_path, method: :get %>
+        <%= link_to  "Go to Park Types", parktypes_path, method: :get %>
+        <%= link_to  "Go to National Parks", natparks_path, method: :get %>
+        <%= link_to "Log Out", sessions_path, method: :delete %>
+      </div>
 
     <%= yield %>
+
   </body>
 </html>
