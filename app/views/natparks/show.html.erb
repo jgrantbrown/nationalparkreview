@@ -1,6 +1,8 @@
 
+<div class="container-1parkshow">
+<div class="container-2parkshow">
 
-<h1> Some interesting info about <%= @natpark.fullName %> </h1>
+<h1>  <%= @natpark.fullName %> </h1>
   <p>Park Name: <%=@natpark.name%></p>
   <p>State: <%=@natpark.states%></p>
   <p>Short Description: <%= @natpark.description %></p>
@@ -51,3 +53,5 @@
       <%= hidden_field_tag("review[traveller_id]", current_user.traveller_id) %>
       <%= submit_tag("Create") %>
     <% end %>
+</div>
+</div>
