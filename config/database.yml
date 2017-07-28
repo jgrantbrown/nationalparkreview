@@ -25,5 +25,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.pg
+   adapter: postgresql
+   encoding: unicode
+   database: nationalparkreview_production
+   pool: 5
