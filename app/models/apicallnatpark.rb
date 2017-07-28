@@ -1,0 +1,3 @@
+class Apicallnatpark < ApplicationRecord
+
+end

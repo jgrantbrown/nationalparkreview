@@ -1,0 +1,24 @@
+
+
+<div>
+  <h1>Park Type: <%= params[:id]%></h1>
+</div>
+<div class='mainnats'>
+<div class="container-2">
+
+
+
+  <div>
+    <% @natparks.each do |park| %>
+    <% if park["designation"] == params[:id] %>
+          <p><%= park.name%>, <%= park.states%></p>
+          Reviews: <%= park.reviews.count %> <button><a href="/natparks/<%= park.id%>">Find out more!</a></button>
+          </p>
+
+
+    <% end %>
+    <% end %>
+  </div>
+
+</div>
+</div>

@@ -1,0 +1,17 @@
+
+
+<div class='mainnats'>
+  <div class="container-2">
+
+<h1> Park Types in the National Parks Services.</h1>
+
+<div class='parktypeslist'>
+    <% @designations.each do |park| %>
+
+          <p><%= park["designation"] %>
+          <button><a href='/parktypes/<%=park.designation %>'>See Parks</a></button></p>
+    <% end %>
+<div>
+
+  </div>
+</div>

@@ -1,16 +1,26 @@
-<%= link_to "Log Out", sessions_path, method: :delete %>
-<%= button_to  "Go to National Parks", natparks_path, method: :get %>
-<%= button_to  "Go to Travellers Page", travellers_path, method: :get %>
 
 
-
-<h1> Some interesting info about <%= @natpark.name %> National Park. </h1>
+<h1> Some interesting info about <%= @natpark.fullName %> </h1>
   <p>Park Name: <%=@natpark.name%></p>
-  <p>State: <%=@natpark.state%></p>
+  <p>State: <%=@natpark.states%></p>
   <p>Short Description: <%= @natpark.description %></p>
+  <p>Directions: <%= @natpark.directionsInfo %> </p>
+  <p>General Weather Info: <%= @natpark.weatherInfo %> </p>
+  <%= @natpark.latLong %>
+  <button><a href= "<%= @natpark.url %>">Offical Park Website</a></button>
+
+
+<p> Travellers who have reviewed:</p>
+  <% @account.each do |account| %>
+    <% @natpark.travellers.each do |traveller| %>
+
+    <%= traveller.account.username %>
+
+    <% end %>
+  <% end%>
 
   <p>Reviews: </p>
-  <% @reviews.each do |review| %>
+  <% @natpark.reviews.each do |review| %>
       <div class="reviewcontainer">
         <% @traveller_id= review.traveller_id %>
         <% @username=Account.find_by(traveller_id: @traveller_id) %>
@@ -32,7 +42,7 @@
     <% end %>
 
   <h1> Add your review! </h1>
-    <%= form_tag("/reviews", method: "post") do %>
+    <%= form_tag("/reviews", method: "post", id: 'review-form') do %>
       <%= label_tag(:title ) %>
       <%= text_field_tag("review[title]") %>
       <%= label_tag(:comment) %>
