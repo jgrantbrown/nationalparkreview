@@ -11,9 +11,6 @@ def self.designations()
   self.select(:designation).distinct
 end
 
-def self.find_by_designation()
-   self.find_by ["designation= ?", params[:id]]
-end
 
 
 end
