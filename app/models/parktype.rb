@@ -12,6 +12,8 @@ def self.find_by_designation()
    self.find_by ["designation= ?", params[:id]]
 end
 
-
+def self.by_parktype_count
+  self.where(:designation=>park["designation"]).count
+end
 
 end

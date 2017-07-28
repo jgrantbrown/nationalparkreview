@@ -11,6 +11,8 @@ def self.designations()
   self.select(:designation).distinct
 end
 
-
+def self.by_parktype_count()
+  self.where(:designation=>park["designation"]).count
+end
 
 end

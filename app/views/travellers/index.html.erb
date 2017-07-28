@@ -3,8 +3,9 @@
 
 <h1> All of our traveling buddies. </h1>
 
-
-<h2> Coming soon!!</h2>
+  <% @account.each do |traveler| %>
+    <%= traveler.username %>
+  <% end%>
 
 </div>
 </div>

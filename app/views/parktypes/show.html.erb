@@ -8,8 +8,8 @@
   <div class="parktypeslist">
     <% @natparks.each do |park| %>
     <% if park["designation"] == params[:id] %>
-          <p><%= park.name%> <%= park.designation%>, <%= park.states%>
-          Reviews: <%= park.reviews.count %> <button><a href="/natparks/<%= park.id%>">Find out more!</a></button>
+          <h2><%= park.name%> <%= park.designation%>, <%= park.states%></h2>
+          <p>Reviews: <%= park.reviews.count %> <button><a href="/natparks/<%= park.id%>">Find out more!</a></button>
           </p>
 
 
