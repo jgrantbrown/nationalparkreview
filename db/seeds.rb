@@ -13,8 +13,8 @@
 
 Traveller.create(name: "ME")
 
-Account.create(username: "me", password_digest: "me", first_name: "me", last_name: "johnson", email: "me@yahoo.com")
-Review.create( title: "this", comment: "how ya", natpark_id: 1, traveller_id: 1)
+Account.create({username: "me", password_digest: "me", first_name: "me", last_name: "johnson", email: "me@yahoo.com"});
+Review.create( {title: "this", comment: "how ya", natpark_id: 1, traveller_id: 1})
 Review.create( title: "that", comment: "Love it", natpark_id: 1, traveller_id: 2)
 Review.create( title: "other", comment: "Awesome", natpark_id: 2, traveller_id: 3)
 Review.create( title: "thing", comment: "It was oK", natpark_id: 5, traveller_id: 3)

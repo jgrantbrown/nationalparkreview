@@ -27,9 +27,9 @@ end
 # BETA testing data using to show what info is being pulled
 # how do I only load once and not creat duplicates?
 # trying to build method to add persitence of park data
-def create_parks
+def index
   @natparks=Natpark.all
-  binding.pry
+
   @parkscall = apicall()
 
   @parkscall["data"].each do |park|
