@@ -28,6 +28,3 @@
 #         @newpark = Natpark.create(park)
 # end
 #   end
-
-
-end
