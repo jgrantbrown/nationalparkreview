@@ -11,9 +11,29 @@
   <%= @natpark.latLong %>
   <button><a href= "<%= @natpark.url %>">Offical Park Website</a></button>
 
+<!--Add google maps  -->
+<h3>My Google Maps Demo</h3>
+  <div id="map"></div>
+  <script>
+    function initMap() {
+      var uluru = {lat: -25.363, lng: 131.044};
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 4,
+        center: uluru
+      });
+      var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+      });
+    }</script>
+
+
+
+
 
 <p> Travellers who have reviewed:</p>
   <% @account.each do |account| %>
+
     <% @natpark.travellers.each do |traveller| %>
 
     <%= traveller.account.username %>
@@ -32,15 +52,14 @@
         <p> Submited by: <%= @username.username %> </p>
 
 
-      <% if @traveller_id==current_user[:traveller_id]%>
-        <%= form_tag("/reviews/#{review.id}", method: "DELETE") do %>
-          <%= submit_tag("Delete")%>
-        <% end %>
+        <% if @traveller_id == current_user[:traveller_id]%>
+          <%= form_tag("/reviews/#{review.id}", method: "DELETE") do %>
+            <%= submit_tag("Delete")%>
+          <% end %>
 
-        <button><%= link_to "Edit this review", edit_review_path(review.id) %></button>
-      <%end%>
-
-    </div>
+          <button><%= link_to "Edit this review", edit_review_path(review.id) %></button>
+        <%end%>
+      </div>
     <% end %>
 
   <h1> Add your review! </h1>
@@ -53,5 +72,7 @@
       <%= hidden_field_tag("review[traveller_id]", current_user.traveller_id) %>
       <%= submit_tag("Create") %>
     <% end %>
+
+
 </div>
 </div>
