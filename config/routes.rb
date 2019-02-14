@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   resources :natparks, only: [:index, :show]
   # resources :travellers, only: [:index, :new, :show] dont' need new and show yet?
-  resources :travellers, only: [:index, ]
+  resources :travellers, only: [:index]
   resources :reviews, only: [:index, :create, :destroy, :edit, :update]
 
 

@@ -11,6 +11,7 @@ gem 'rails', '~> 5.0.2'
 gem 'better_errors'
 gem  'binding_of_caller'
 gem 'flickr.rb', '~> 1.2', '>= 1.2.1'
+gem "nokogiri", ">= 1.8.5"
 # REMOVE FOR HEROKU
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
