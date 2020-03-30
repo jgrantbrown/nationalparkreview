@@ -1,6 +1,9 @@
 
 bundle update nokogiri
 
+changed indexhtml for parktypes
+<p>  Number of parks: <%= @natparks.where(:designation=>park["designation"]).count %>
+
 
 parktypes/index.html.erb
 <% @designations.each do |park| %>

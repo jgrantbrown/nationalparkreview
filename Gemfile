@@ -15,6 +15,8 @@ gem "nokogiri", ">= 1.10.9"
 # REMOVE FOR HEROKU
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
+gem 'rails_12factor' 
+
 # ADD FOR HEROKU
 group :development, :test do
   gem 'sqlite3', '~> 1.3.6'

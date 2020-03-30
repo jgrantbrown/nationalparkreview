@@ -4,8 +4,10 @@ class NatparksController < ApplicationController
   # def initialize
   # end
   def index
+
     @natparks = Natpark.sort_by_review_count()
     @designations= Natpark.designations()
+
   end
 
   def show

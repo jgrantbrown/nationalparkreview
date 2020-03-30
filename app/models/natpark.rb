@@ -8,6 +8,7 @@ has_many :travellers, :through => :reviews
  end
 
 def self.designations()
+
   self.select(:designation).distinct
 end
 
