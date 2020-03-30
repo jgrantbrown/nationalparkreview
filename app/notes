@@ -1,4 +1,7 @@
 
+bundle update nokogiri
+
+
 parktypes/index.html.erb
 <% @designations.each do |park| %>
       <% if !park["designation"].empty? %>
