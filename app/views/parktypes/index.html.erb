@@ -11,10 +11,11 @@
   <div class='parktypeslist'>
     <% @designations.each do |park| %>
           <% if !park["designation"].empty? %>
-            <h2><%= park["designation"] %></h2>
-                
-              <p>  Number of parks: <%= @natparks.where(designation: park["designation"]).count %>
-                <button><a href='/parktypes/<%= park.designation %>'>See Parks</a></button>
+      
+            <h2><%= park[:designation] %></h2>
+
+              <p>  Number of parks: <%= @natparks.where(designation: park[:designation]).count %>
+                <button><a href='/parktypes/<%= park[:designation] %>'>See Parks</a></button>
             </p>
         <% end %>
     <% end %>
