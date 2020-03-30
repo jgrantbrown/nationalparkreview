@@ -6,7 +6,7 @@ class ParktypesController < ApplicationController
   def index
     @natparks = Natpark.all
     @designations= Natpark.designations()
-
+  
   end
 
   def show

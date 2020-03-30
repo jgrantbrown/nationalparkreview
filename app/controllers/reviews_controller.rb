@@ -6,7 +6,7 @@ class ReviewsController < ApplicationController
   end
 
   def create
-    
+
       # if the request was an ajax request (google rails respond_to)
       # save the review to the db (normal)
       # send back json representation of the review object
@@ -18,9 +18,7 @@ class ReviewsController < ApplicationController
   end
 
   def edit
-
         @review = Review.find(params[:id])
-
         @natpark= Natpark.find(@review.natpark_id)
 
   end
