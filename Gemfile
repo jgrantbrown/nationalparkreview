@@ -7,11 +7,12 @@ end
 
 gem 'pry'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.2'
+gem 'rails', '~> 5.0.4'
 gem 'better_errors'
 gem  'binding_of_caller'
 gem 'flickr.rb', '~> 1.2', '>= 1.2.1'
 gem "nokogiri", ">= 1.10.9"
+gem "actionview"
 # REMOVE FOR HEROKU
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'

@@ -207,6 +207,7 @@ PLATFORMS
   x86-mswin32
 
 DEPENDENCIES
+  actionview
   activerecord-postgresql-adapter
   bcrypt (~> 3.1.7)
   better_errors
@@ -221,7 +222,7 @@ DEPENDENCIES
   pg
   pry
   puma (~> 3.0)
-  rails (~> 5.0.2)
+  rails (~> 5.0.4)
   rails_12factor
   sass-rails (~> 5.0)
   spring
