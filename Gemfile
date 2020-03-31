@@ -15,15 +15,16 @@ gem "nokogiri", ">= 1.10.9"
 # REMOVE FOR HEROKU
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
-gem 'rails_12factor' 
-
+gem 'rails_12factor'
+gem 'pg'
 # ADD FOR HEROKU
 group :development, :test do
-  gem 'sqlite3', '~> 1.3.6'
+  # gem 'sqlite3', '~> 1.3.6'
+  # gem 'pg'
 end
 
 group :production do
-  gem 'pg'
+  # gem 'pg'
   gem 'activerecord-postgresql-adapter'
 end
 
