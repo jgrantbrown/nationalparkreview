@@ -1,9 +1,19 @@
+/config/local_env.yml
+
 not here
 
 
 API_KEY=AIzaSyATCocyv1N1y5q2S2pI_fNihM2Hjc0h_24
 
+API_KEY: Fdp8XwE53KdaNZwgCK9DsudXOPBtEN6iBy9abVNy
 
 New Api key 3/30/20
  Fdp8XwE53KdaNZwgCK9DsudXOPBtEN6iBy9abVNy
  https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=Fdp8XwE53KdaNZwgCK9DsudXOPBtEN6iBy9abVNy
+
+
+https://developer.nps.gov/api/v0/parks?limit=519&api_key=Fdp8XwE53KdaNZwgCK9DsudXOPBtEN6iBy9abVNy
+
+
+Version 1 change
+https://developer.nps.gov/api/v1/parks?limit=10&api_key=Fdp8XwE53KdaNZwgCK9DsudXOPBtEN6iBy9abVNy

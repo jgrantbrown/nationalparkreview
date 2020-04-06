@@ -1,21 +1,9 @@
  <!-- THis is not being used??? I think -->
- <p><%= @parkscall["data"][0].keys %></p>
 
 
-  <% @parkscall["data"].each do |park| %>
-
-  <div>
-      <h3><%=park["fullName"]%></h3>
-      <%=park["designation"]%>
-
-<% park.each do |contentlabel,content|%>
-  <p><%= contentlabel.to_s %>: <%= content %></p>
-</div>
+  <% @parkscall.each do |park| %>
+    <div>
+        <h3><%=park["fullName"]%></h3>
+        <%=park["designation"]%>
+    </div>
 <%end%>
-<%end %> -->
- <%=@parkscall["data"] %>
-
-<%= @parkscall["data"][0] %>
-
-<% if `park["designation"]` == "National Park" %>
-<% end %>

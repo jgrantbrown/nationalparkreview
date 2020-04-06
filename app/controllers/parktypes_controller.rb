@@ -4,9 +4,9 @@ class ParktypesController < ApplicationController
   # def initialize
   # end
   def index
+    
     @natparks = Natpark.all
-    @designations= Natpark.designations()
-
+    @designations = Natpark.designations()
   end
 
   def show

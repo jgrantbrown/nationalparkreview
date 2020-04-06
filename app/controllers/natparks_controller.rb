@@ -10,6 +10,7 @@ class NatparksController < ApplicationController
   end
 
   def show
+    debugger
      @natpark = Natpark.find(params[:id])
      @account = Account.all
   end

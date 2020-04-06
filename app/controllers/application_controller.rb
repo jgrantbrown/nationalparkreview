@@ -9,10 +9,12 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
+
     Account.find(session[:account_id]) if logged_in?
   end
 
   def destroy
+
     session[:account_id]=nil
     redirect_to root_path
   end
